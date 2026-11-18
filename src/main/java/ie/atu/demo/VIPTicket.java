@@ -1,11 +1,14 @@
 package ie.atu.demo;
 
 public class VIPTicket extends Ticket {
-    public VIPTicket() {
-        super();
+    public VIPTicket(String eventName, String holderName, double basePrice) {
+
+        super(eventName, holderName, basePrice);
     }
 
-    public double VIPPrice() {
+
+    @Override
+    public double calculatePrice() {
         return getBasePrice() + 25;
     }
 

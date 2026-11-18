@@ -6,9 +6,9 @@ public class Ticket {
     private double basePrice;
 
     public Ticket(String eventName, String holderName, double basePrice) {
-        this.eventName = "";
-        this.holderName = "";
-        this.basePrice = 0;
+        this.eventName = eventName;
+        this.holderName = holderName;
+        this.basePrice = basePrice;
     }
 
     public String getEventName() {
@@ -21,6 +21,10 @@ public class Ticket {
 
     public double getBasePrice() {
         return basePrice;
+    }
+
+    public double calculatePrice() {
+        return getBasePrice();
     }
 
     @Override
